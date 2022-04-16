@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | keepSafe payements bank</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="wrapper md:container mx-auto py-5">
+        <h2 class="text-center text-5xl my-5 underline">Welcome to your Dashboard</h2>
+        <div class="view-area flex justify-center py-10">
+            <div class="single-view-col bg-orange-600 px-20 py-8">
+                <h3 class="text-xl">Deposit</h3>
+            </div>
+            <div class="single-view-col bg-cyan-600 px-20 py-8 mx-10">
+                <h3 class="text-xl">Withdraw</h3>
+            </div>
+            <div class="single-view-col bg-pink-600	px-20 py-8">
+                <h3 class="text-xl">Balance</h3>
+            </div>
+        </div>
+        <div class="input-area flex justify-center">
+            <div class="single-input-area bg-green-600 px-11 py-8 mr-4 rounded">
+                <h3 class="text-xl mb-3">Please Deposit here:</h3>
+                <div class="deposit">
+                    <input type="text" name="deposit" id="deposit" placeholder="Enter your amount" class="p-1">
+                    <button class="bg-white rounded text-black px-4 py-1 my-2">Deposit</button>
+                </div>
+            </div>
+            <div class="single-input-area bg-amber-500 px-11 py-8 ml-4 rounded">
+                <h3 class="text-xl mb-3">Please Withdraw here:</h3>
+                <div class="withdraw">
+                    <input type="text" name="withdraw" id="withdraw" placeholder="Enter your amount" class="p-1">
+                    <button class="bg-white rounded text-black px-4 py-1 my-2">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
