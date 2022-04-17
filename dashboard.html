@@ -7,37 +7,51 @@
     <title>Dashboard | keepSafe payements bank</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/ce1c9b0c75.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="wrapper md:container mx-auto py-5">
-        <h2 class="text-center text-5xl my-5 underline">Welcome to your Dashboard</h2>
-        <div class="view-area flex justify-center py-10">
+        <h2 class="text-center text-5xl my-2 underline">Welcome to your Dashboard</h2>
+        <div class="view-area flex text-center justify-center py-10">
             <div class="single-view-col bg-orange-600 px-20 py-8">
+                <i class="fa-solid fa-money-bill-transfer text-4xl"></i>
                 <h3 class="text-xl">Deposit</h3>
+                <h3 class="text-2xl">$<span id="deposit-field">20</span></h3>
             </div>
             <div class="single-view-col bg-cyan-600 px-20 py-8 mx-10">
+                <i class="fa-solid fa-hand-holding-dollar text-4xl"></i>
                 <h3 class="text-xl">Withdraw</h3>
+                <h3 class="text-2xl">$<span id="withdraw-field">000</span></h3>
             </div>
             <div class="single-view-col bg-pink-600	px-20 py-8">
+                <i class="fa-solid fa-money-check-dollar text-4xl"></i>
                 <h3 class="text-xl">Balance</h3>
+                <h3 class="text-2xl">$<span id="balance-field">500</span></h3>
             </div>
         </div>
         <div class="input-area flex justify-center">
             <div class="single-input-area bg-green-600 px-11 py-8 mr-4 rounded">
                 <h3 class="text-xl mb-3">Please Deposit here:</h3>
-                <div class="deposit">
-                    <input type="text" name="deposit" id="deposit" placeholder="Enter your amount" class="p-1">
-                    <button class="bg-white rounded text-black px-4 py-1 my-2">Deposit</button>
+                <div class="deposit flex items-center">
+                    <div class="depo-icon bg-white rounded">
+                        <i class="fa-solid fa-sack-dollar pl-1"></i>
+                        <input type="number" name="deposit" id="deposit" placeholder="Enter your amount" class="p-1 outline-none">
+                    </div>
+                    <button class="bg-white rounded text-black px-4 py-1 mx-2" id="deposit-btn">Deposit</button>
                 </div>
             </div>
             <div class="single-input-area bg-amber-500 px-11 py-8 ml-4 rounded">
                 <h3 class="text-xl mb-3">Please Withdraw here:</h3>
-                <div class="withdraw">
-                    <input type="text" name="withdraw" id="withdraw" placeholder="Enter your amount" class="p-1">
-                    <button class="bg-white rounded text-black px-4 py-1 my-2">Withdraw</button>
+                <div class="withdraw flex items-center">
+                    <div class="withdraw-icon bg-white rounded">
+                        <i class="fa-solid fa-sack-dollar pl-1"></i>
+                        <input type="number" name="withdraw" id="withdraw" placeholder="Enter your amount" class="p-1 outline-none">
+                    </div>
+                    <button class="bg-white rounded text-black px-4 py-1 mx-2">Withdraw</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="dashboard.js"></script>
 </body>
 </html>

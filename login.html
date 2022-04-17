@@ -6,34 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log-in | keepSage payements bank</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/ce1c9b0c75.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class=" md:container mx-auto wrapper flex flex-auto bg-rose-500">
-        <div class="info py-44 text-white px-2 w-3/5 text-center">
+    <div class=" md:container mx-auto wrapper flex justify-center items-center flex-auto bg-rose-500">
+        <div class="info py-20 text-white px-2 w-3/5 text-center">
+            <div class="logo">
+                <img src="img/keepsafe.png" alt="logo" class="w-1/4 mx-auto">
+            </div>
             <h2 class="text-3xl text-center">Welcome to keepSafe payements Bank</h2>
             <p class="text-center py-5">Payments banks are new model of banks, conceptualised by the Reserve Bank of India, which cannot issue credit. Fully secure and safe.</p>
             <button class="bg-white rounded text-black px-3 py-2">Join Now!</button>
         </div>
         <div class="login-form bg-emerald-400 w-2/6 py-20 w-2/5">
-            <div class="logo">
-                <img src="img/keepsafe.png" alt="logo" class="w-1/4 mx-auto">
-            </div>
             <div class="form px-5">
+                <div class="logo text-center py-6">
+                    <i class="fa-solid fa-user fa-user-large text-5xl"></i>
+                </div>
                 <h2 class="text-3xl text-center underline">Log in to keepSafe</h2>
                 <div class="user_id">
                     <label for="user_id">User Id:</label>
-                    <input type="text" name="user_id" id="user_id" class=" w-full  p-1">
+                    <div class="icon-input flex items-center justify-center bg-white px-2">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="user_id" id="user_id" class=" w-full  p-1 outline-none">
+                    </div>
                 </div>
                 <div class="password">
                     <label for="password">password:</label>
-                    <input type="password" name="password" id="password" class="w-full p-1">
-                </div>
+                    <div class="icon-input flex items-center justify-center bg-white px-2">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" name="password" id="password" class="w-full  p-1 outline-none">
+                    </div>
+                    </div>
                 <div class="submit">
-                    <button class="bg-white rounded text-black px-4 py-2 my-2">Log In</button>
+                    <button id="login_submit" class="bg-white rounded text-black px-4 py-2 my-2">Log In</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
