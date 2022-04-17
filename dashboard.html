@@ -5,13 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | keepSafe payements bank</title>
+    <link rel="shortcut icon" href="img/keepsafe.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/ce1c9b0c75.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="wrapper md:container mx-auto py-5">
-        <h2 class="text-center text-5xl my-2 underline">Welcome to your Dashboard</h2>
+        <div class="header-portion flex justify-evenly items-center">
+            <h2 class="text-5xl my-2 underline">Welcome to your Dashboard</h2>
+            <div class="header-profile border-rose-600 p-1 border-2 bg-rose-500 rounded cursor-pointer" id="log-out">
+                <h3 class="text-xl inline">Log-out</h3>
+                <i class="fa-solid fa-right-from-bracket text-xl"></i>
+            </div>
+        </div>
         <div class="view-area flex text-center justify-center py-10">
             <div class="single-view-col bg-orange-600 px-20 py-8">
                 <i class="fa-solid fa-money-bill-transfer text-4xl"></i>
