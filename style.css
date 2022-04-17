@@ -1,5 +1,5 @@
 .wrapper{
-    margin-top: 10vh;
+    margin: 5vh auto;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .single-view-col {
@@ -7,8 +7,15 @@
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
     color: white;
 }
+.single-view-col :nth-child(2) {
+    color: black;
+    text-transform: uppercase;
+    margin: 5px 0;
+    font-weight: 600;
+}
 .single-view-col :nth-child(3) {
     box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+    padding: 5px;
 }
 .single-input-area {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
