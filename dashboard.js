@@ -44,6 +44,8 @@ document.getElementById("deposit-btn").addEventListener("click", function(){
     const depositedAmount = userInputAmount('deposit');
 
     if(depositedAmount > 0){
+        //Showing an alert for Money deposit
+        alert( "$" + depositedAmount + " Deposited Successfully")
         //calculate & show total deposited amount
         actionAmount('deposit-block',depositedAmount);
         //calculate and changed the previous Main balance to show updated calculated balance
@@ -61,15 +63,19 @@ document.getElementById("deposit-btn").addEventListener("click", function(){
         const prebalanceText = prebalance.innerText;
         const prebalanceAmount = parseFloat(prebalanceText);
 
-        if( (withdrawAmount > 0) && (withdrawAmount <= prebalanceAmount) ){
+        //selecting main avl balance for validation
+        let avlAmountText = document.getElementById('show-balance').innerText;
+        let avlAmount = parseFloat(avlAmountText);
+
+        if( (withdrawAmount > 0) && (withdrawAmount <= avlAmount) ){
+            //Showing an alert for Money Withdraw
+            alert( "$" + withdrawAmount + " Withdrawn Successfully")
             //calculate & show total withdrawn amount
             actionAmount("withdraw-block",withdrawAmount)
             //calculate and changed the previous Main balance to show updated calculated balance
             updateMainBalance(withdrawAmount,false);
-        }if(withdrawAmount > prebalanceAmount){
-            alert("You don't have sufficient fund to withdraw");
         }else{
-            alert("please enter valid amount!")
+            alert("You don't have sufficient fund to withdraw");
         }
     })
 
@@ -77,6 +83,8 @@ document.getElementById("deposit-btn").addEventListener("click", function(){
 document.getElementById("log-out").addEventListener("click",function(){
     window.location.href="login.html"
 });
+
+
     
 
     
