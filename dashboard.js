@@ -1,3 +1,4 @@
+//Function to take User Input
 function userInputAmount(inputId){
     //take user deposit input
     const inputField = document.getElementById(inputId);
@@ -7,7 +8,8 @@ function userInputAmount(inputId){
     inputField.value = '';
     return inputAmount;
 }
-function totalAmount (showBalanceId,inputedAmount){
+//Funtion to update amount on Deposite/Withdraw Block
+function actionAmount (showBalanceId,inputedAmount){
     //take previous deposit
     const depoPre= document.getElementById(showBalanceId);
     const depoPreAmountText = depoPre.innerText;
@@ -17,7 +19,7 @@ function totalAmount (showBalanceId,inputedAmount){
     //changed the previous deposited value to show updated calculated value
     depoPre.innerText = depoCurrentAmount;
 }
-
+//Function to Update Available Main Balance
 function updateMainBalance(transacAmount,isAdd){
     // take previous Main balance
     const prebalance = document.getElementById("show-balance");
@@ -43,7 +45,7 @@ document.getElementById("deposit-btn").addEventListener("click", function(){
 
     if(depositedAmount > 0){
         //calculate & show total deposited amount
-        totalAmount('show-deposit',depositedAmount);
+        actionAmount('show-deposit',depositedAmount);
         //calculate and changed the previous Main balance to show updated calculated balance
         updateMainBalance(depositedAmount,true);
     }else{
@@ -61,7 +63,7 @@ document.getElementById("deposit-btn").addEventListener("click", function(){
 
         if( (withdrawAmount > 0) && (withdrawAmount <= prebalanceAmount) ){
             //calculate & show total withdrawn amount
-            totalAmount("show-withdraw",withdrawAmount)
+            actionAmount("show-withdraw",withdrawAmount)
             //calculate and changed the previous Main balance to show updated calculated balance
             updateMainBalance(withdrawAmount,false);
         }if(withdrawAmount > prebalanceAmount){
