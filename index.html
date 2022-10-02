@@ -11,7 +11,9 @@
     <link rel="shortcut icon" href="img/keepsafe.png" type="image/x-icon">
 </head>
 <body>
-    <div class=" md:container mx-auto wrapper flex justify-center items-center flex-auto bg-rose-500">
+    <!-- Container -->
+    <div class="md:container mx-auto wrapper flex flex-col sm:flex-row justify-center items-center flex-auto bg-rose-500">
+        <!-- .welcome-words -->
         <div class="info py-20 text-white px-2 w-3/5 text-center">
             <div class="logo">
                 <img src="img/keepsafe.png" alt="logo" class="w-1/4 mx-auto">
@@ -20,12 +22,13 @@
             <p class="text-center py-5">Payments banks are new model of banks, conceptualised by the Reserve Bank of India, which cannot issue credit. Fully secure and safe.</p>
             <button class="bg-white rounded text-black px-3 py-2">Join Now!</button>
         </div>
-        <div class="login-form bg-emerald-400 w-2/6 py-20 w-2/5">
+        <!-- login-form -->
+        <div class="login-form bg-emerald-400 w-full sm:w-2/5 py-20">
             <div class="form px-5">
                 <div class="logo text-center py-6">
                     <i class="fa-solid fa-user fa-user-large text-5xl"></i>
                 </div>
-                <h2 class="text-3xl text-center underline">Log in to keepSafe</h2>
+                <h2 class="text-3xl text-center underline mb-2">Log in to keepSafe</h2>
                 <div class="user_id">
                     <label for="user_id">User Id:</label>
                     <div class="icon-input flex items-center justify-center bg-white px-2">
@@ -39,9 +42,12 @@
                         <i class="fa-solid fa-key"></i>
                         <input type="password" name="password" id="password" class="w-full  p-1 outline-none">
                     </div>
-                    </div>
+                </div>
                 <div class="submit">
                     <button id="login_submit" class="bg-white rounded text-black px-4 py-2 my-2">Log In</button>
+                </div>
+                <div class="temp text-center mt-2 font-bold text-red-700">
+                    <p>[ User ID: admin & Password: 123 ]</p>
                 </div>
             </div>
         </div>
