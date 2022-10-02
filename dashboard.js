@@ -81,7 +81,7 @@ document.getElementById("deposit-btn").addEventListener("click", function(){
 
 //log out page redirec to log-in page
 document.getElementById("log-out").addEventListener("click",function(){
-    window.location.href="login.html"
+    window.location.href="index.html"
 });
 
 
