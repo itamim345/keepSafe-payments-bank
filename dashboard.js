@@ -9,15 +9,15 @@ function userInputAmount(inputId){
     return inputAmount;
 }
 //Funtion to update amount on Deposite/Withdraw Block
-function actionAmount (showBalanceId,inputedAmount){
+function actionAmount (ActionBlockId,inputedAmount){
     //take previous deposit
-    const depoPre= document.getElementById(showBalanceId);
-    const depoPreAmountText = depoPre.innerText;
-    const depoPreAmount = parseFloat(depoPreAmountText);   
+    const actionBlockField= document.getElementById(ActionBlockId);
+    const actionBlockPreAmountText = actionBlockField.innerText;
+    const ActionBlockPreAmount = parseFloat(actionBlockPreAmountText);   
     //calculate total amount
-    const depoCurrentAmount = (depoPreAmount+inputedAmount);
+    const CurrentActionAmount = (ActionBlockPreAmount+inputedAmount);
     //changed the previous deposited value to show updated calculated value
-    depoPre.innerText = depoCurrentAmount;
+    actionBlockField.innerText = CurrentActionAmount;
 }
 //Function to Update Available Main Balance
 function updateMainBalance(transacAmount,isAdd){
@@ -45,7 +45,7 @@ document.getElementById("deposit-btn").addEventListener("click", function(){
 
     if(depositedAmount > 0){
         //calculate & show total deposited amount
-        actionAmount('show-deposit',depositedAmount);
+        actionAmount('deposit-block',depositedAmount);
         //calculate and changed the previous Main balance to show updated calculated balance
         updateMainBalance(depositedAmount,true);
     }else{
@@ -57,13 +57,13 @@ document.getElementById("deposit-btn").addEventListener("click", function(){
         // take user withdraw input
         const withdrawAmount = userInputAmount('withdraw');
         // take previous Main balance to ensure the inputed withdraw amount is availalable in account or not
-        const prebalance = document.getElementById("show-balance");
+        const prebalance = document.getElementById("withdraw-block");
         const prebalanceText = prebalance.innerText;
         const prebalanceAmount = parseFloat(prebalanceText);
 
         if( (withdrawAmount > 0) && (withdrawAmount <= prebalanceAmount) ){
             //calculate & show total withdrawn amount
-            actionAmount("show-withdraw",withdrawAmount)
+            actionAmount("withdraw-block",withdrawAmount)
             //calculate and changed the previous Main balance to show updated calculated balance
             updateMainBalance(withdrawAmount,false);
         }if(withdrawAmount > prebalanceAmount){
